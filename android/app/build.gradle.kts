@@ -60,13 +60,6 @@ android {
 
     // Signing Config
     signingConfigs {
-<<<<<<< HEAD
-        create("release") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
-=======
     create("release") {
         val keyAliasVal = keystoreProperties["keyAlias"]?.toString()
         val keyPasswordVal = keystoreProperties["keyPassword"]?.toString()
@@ -83,7 +76,6 @@ android {
             keyPassword = keyPasswordVal
             storeFile = file(storeFileVal)
             storePassword = storePasswordVal
->>>>>>> 47273cb05f712ab9bd50e88a411836648250b559
         }
     }
 

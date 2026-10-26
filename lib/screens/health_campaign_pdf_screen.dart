@@ -3,13 +3,11 @@ import 'dart:async';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 
-import 'package:flutter/rendering.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:open_file/open_file.dart';
 import 'dart:io';
 
-import 'package:jin_reflex_new/screens/utils/comman_app_bar.dart';
 
 
 const Map<int, int> _knownTotalPagesByYear = {
@@ -77,7 +75,7 @@ Future<String?> _fetchImageBase64Flexible({
 
 class HealthCampaignScreen extends StatefulWidget {
   const HealthCampaignScreen({super.key, this.initialYear});
-  final initialYear;
+  final int? initialYear;
 
   @override
   State<HealthCampaignScreen> createState() => _HealthCampaignScreenState();
@@ -270,68 +268,6 @@ class _HealthCampaignScreenState extends State<HealthCampaignScreen> {
             ),
           ],
         );
-  final _CampaignPdfItem item;
-
-  @override
-  State<_CampaignPdfTab> createState() => _CampaignPdfTabState();
-}
-
-class _CampaignPdfTabState extends State<_CampaignPdfTab>
-    with AutomaticKeepAliveClientMixin<_CampaignPdfTab> {
-  final PdfViewerController _pdfViewerController = PdfViewerController();
-  int _currentPage = 1;
-  int _totalPages = 0;
-
-  @override
-  bool get wantKeepAlive => true;
-
-  void _goToPreviousPage() {
-    if (_currentPage > 1) {
-      _pdfViewerController.previousPage();
-    }
-  }
-
-  void _goToNextPage() {
-    if (_totalPages > 0 && _currentPage < _totalPages) {
-      _pdfViewerController.nextPage();
-    }
-  }
-
-  @override
-  void dispose() {
-    _pdfViewerController.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    super.build(context);
-
-    return SfPdfViewer.network(
-      widget.item.url,
-      controller: _pdfViewerController,
-      pageLayoutMode: PdfPageLayoutMode.single,
-      scrollDirection: PdfScrollDirection.horizontal,
-      canShowPaginationDialog: true,
-      canShowScrollHead: true,
-      enableDoubleTapZooming: true,
-
-      onDocumentLoaded: (details) {
-        if (!mounted) return;
-        setState(() {
-          _totalPages = details.document.pages.count;
-        });
-      },
-
-      onPageChanged: (details) {
-        if (!mounted) return;
-        setState(() {
-          _currentPage = details.newPageNumber;
-        });
-      },
-
-      onDocumentLoadFailed: (details) {
-        print("PDF Error: ${details.description}");
       },
     );
 

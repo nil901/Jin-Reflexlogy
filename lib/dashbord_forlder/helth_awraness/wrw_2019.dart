@@ -806,12 +806,6 @@ class _Wrw2019ScreenState extends State<Wrw2019Screen> {
               height: 1.6,
             ),
           ),
-<<<<<<< HEAD
-          // Container(height: 200, width: double.infinity, color: Colors.grey),
-          SizedBox(height: 10),
-          const YoutubeVideoPlayer(
-            videoUrl: "https://www.youtube.com/watch?v=mo9l8_jM2rU",
-=======
 
           SizedBox(height: 20),
 
@@ -851,7 +845,6 @@ class _Wrw2019ScreenState extends State<Wrw2019Screen> {
                 ),
               ),
             ),
->>>>>>> 47273cb05f712ab9bd50e88a411836648250b559
           ),
         ],
       ),

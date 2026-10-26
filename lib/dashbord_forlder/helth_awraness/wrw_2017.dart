@@ -80,48 +80,6 @@ class _Wrw2017ScreenState extends State<Wrw2017Screen> {
 
           SizedBox(height: 20),
 
-<<<<<<< HEAD
-         
-
-=======
-          GestureDetector(
-            onTap: () async {
-              final url = Uri.parse("https://youtu.be/GQ54h6Lb8YM");
-
-              if (await canLaunchUrl(url)) {
-                await launchUrl(url, mode: LaunchMode.externalApplication);
-              }
-            },
-            child: Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: const DecorationImage(
-                  image: NetworkImage(
-                    "https://img.youtube.com/vi/GQ54h6Lb8YM/0.jpg",
-                  ),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.4),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Center(
-                  child: Icon(
-                    Icons.play_circle_fill,
-                    color: Colors.white,
-                    size: 60,
-                  ),
-                ),
-              ),
-            ),
-          ),
-
-          SizedBox(height: 20),
->>>>>>> 47273cb05f712ab9bd50e88a411836648250b559
 
 _youtubeThumbCard(
   title: "3rd National Conferences and Award Presentaion Ceremony - Mumbai - JR Anil Jain",
@@ -673,46 +631,9 @@ SizedBox(height: 20,),
 
           SizedBox(height: 20),
 
-<<<<<<< HEAD
           _youtubeThumbCard(
             title: "3rd National Conferences and Award Presentation Ceremony - Mumbai - JR Anil Jain",
             url: "https://www.youtube.com/watch?v=LwvtgjrnxAI",
-=======
-          GestureDetector(
-            onTap: () async {
-              final url = Uri.parse("https://youtu.be/LwvtgjrnxAI");
-
-              if (await canLaunchUrl(url)) {
-                await launchUrl(url, mode: LaunchMode.externalApplication);
-              }
-            },
-            child: Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: const DecorationImage(
-                  image: NetworkImage(
-                    "https://img.youtube.com/vi/LwvtgjrnxAI/0.jpg",
-                  ),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.4),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Center(
-                  child: Icon(
-                    Icons.play_circle_fill,
-                    color: Colors.white,
-                    size: 60,
-                  ),
-                ),
-              ),
-            ),
->>>>>>> 47273cb05f712ab9bd50e88a411836648250b559
           ),
 
           const SizedBox(height: 16),
