@@ -1,0 +1,106 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:jin_reflex_new/dashbord_forlder/spine/swpine_details_screen.dart';
+import 'package:jin_reflex_new/screens/utils/comman_app_bar.dart';
+
+class SpinesScreen extends StatefulWidget {
+  const SpinesScreen({super.key});
+
+  @override
+  State<SpinesScreen> createState() => _SpinesScreenState();
+}
+
+class _SpinesScreenState extends State<SpinesScreen> {
+  bool isLoading = true;
+  List spinesList = [];
+
+  @override
+  void initState() {
+    super.initState();
+    fetchSpines();
+  }
+
+  Future<void> fetchSpines() async {
+    try {
+      final response = await http
+          .get(Uri.parse("https://admin.jinreflexology.in/api/spines"));
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        if (data["success"] == true) {
+          setState(() {
+            spinesList = data["data"];
+            isLoading = false;
+          });
+        }
+      }
+    } catch (e) {
+      setState(() => isLoading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: CommonAppBar(title: "Spines"),
+      body: isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              padding: const EdgeInsets.all(16),
+              itemCount: spinesList.length,
+            
+              itemBuilder: (context, index) {
+                final item = spinesList[index];
+
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => SpineDetailsScreen(item: item),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(color: Colors.black12),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ClipRRect(
+                            borderRadius: const BorderRadius.vertical(
+                              top: Radius.circular(14),
+                            ),
+                            child: Image.network(
+                              item["image_url"]?[0] ?? "",
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                              errorBuilder: (_, __, ___) =>
+                                  const Icon(Icons.image, size: 40),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Text(
+                              item["title"] ?? "",
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+    );
+  }
+}

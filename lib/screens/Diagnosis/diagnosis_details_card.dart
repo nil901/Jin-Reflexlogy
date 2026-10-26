@@ -1,0 +1,469 @@
+﻿import 'dart:convert';
+import 'dart:typed_data';
+
+import 'package:http/http.dart' as http;
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:image/image.dart' as img;
+import 'package:jin_reflex_new/api_service/prefs/PreferencesKey.dart';
+import 'package:jin_reflex_new/api_service/prefs/app_preference.dart';
+import 'package:jin_reflex_new/api_service/urls.dart';
+import 'package:jin_reflex_new/dashbord_forlder/freddback_list.dart';
+import 'package:jin_reflex_new/screens/Diagnosis/diagnosis_history_screen.dart';
+import 'package:jin_reflex_new/screens/Diagnosis/diagnosis_record_screen.dart';
+import 'package:jin_reflex_new/screens/Diagnosis/diagnosis_balance_guard.dart';
+import 'package:jin_reflex_new/screens/utils/comman_app_bar.dart';
+
+const String _diagnosisImageFlipPrefKey = "diagnosisImageFlip";
+const String _diagnosisImageFlipDetailsOverridePrefix =
+    "diagnosisImageFlip_details_override";
+
+class DiagnosisDetailsCard extends StatefulWidget {
+  final String patientName;
+  final String patientId;
+  final String diagnosisId;
+  final String date;
+  final String time;
+  final String title;
+  final String? gender;
+
+  DiagnosisDetailsCard({
+    required this.patientName,
+    required this.patientId,
+    required this.diagnosisId,
+    required this.date,
+    required this.time,
+    required this.title,
+    this.gender,
+  });
+
+  @override
+  State<DiagnosisDetailsCard> createState() => _DiagnosisDetailsCardState();
+}
+
+class _DiagnosisDetailsCardState extends State<DiagnosisDetailsCard> {
+  Uint8List? lf;
+  Uint8List? rf;
+  Uint8List? lh;
+  Uint8List? rh;
+  String? lfBase64;
+  String? rfBase64;
+  String? lhBase64;
+  String? rhBase64;
+  bool _flipImagesOnDetails = false;
+  bool loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    final overrideKey =
+        "${_diagnosisImageFlipDetailsOverridePrefix}_${widget.diagnosisId}_${widget.patientId}";
+    final overrideRaw = AppPreference().getString(overrideKey);
+
+    if (overrideRaw == "1" || overrideRaw.toLowerCase() == "true") {
+      _flipImagesOnDetails = true;
+    } else if (overrideRaw == "0" || overrideRaw.toLowerCase() == "false") {
+      _flipImagesOnDetails = false;
+    } else {
+      _flipImagesOnDetails = AppPreference().getBool(
+        _diagnosisImageFlipPrefKey,
+        defValue: true,
+      );
+    }
+    fetchDiagnosisImages();
+  }
+
+  Future<void> _setFlipOnDetails(bool value) async {
+    final overrideKey =
+        "${_diagnosisImageFlipDetailsOverridePrefix}_${widget.diagnosisId}_${widget.patientId}";
+    await AppPreference().setString(overrideKey, value ? "1" : "0");
+    if (!mounted) return;
+    setState(() {
+      _flipImagesOnDetails = value;
+    });
+  }
+
+  Future<void> fetchDiagnosisImages() async {
+    try {
+      final response = await http.post(
+        Uri.parse(diagnosis_images),
+        body: {
+          "pid": AppPreference().getString(PreferencesKey.userId) ?? '',
+          "diagnosisId": widget.diagnosisId.toString(),
+        },
+      );
+      print(diagnosis_images);
+      String raw = response.body.trim();
+
+      int start = raw.indexOf("{");
+      int end = raw.lastIndexOf("}");
+
+      if (start == -1 || end == -1) {
+        throw Exception("No JSON found");
+      }
+
+      String jsonString = raw.substring(start, end + 1);
+      final jsonBody = jsonDecode(jsonString);
+
+      if (jsonBody["success"] == 1) {
+        final data = jsonBody["data"];
+
+        setState(() {
+          lf = _sanitizeImageBytes(data["lf"]);
+          rf = _sanitizeImageBytes(data["rf"]);
+          lh = _sanitizeImageBytes(data["lh"]);
+          rh = _sanitizeImageBytes(data["rh"]);
+          lfBase64 = data["lf"]?.toString();
+          rfBase64 = data["rf"]?.toString();
+          lhBase64 = data["lh"]?.toString();
+          rhBase64 = data["rh"]?.toString();
+          loading = false;
+        });
+      } else {
+        loading = false;
+      }
+    } catch (e) {
+      print("ERROR: $e");
+      loading = false;
+    }
+    if (mounted) setState(() {});
+  }
+
+  Uint8List? _sanitizeImageBytes(dynamic base64Value) {
+    if (base64Value == null) return null;
+
+    try {
+      final bytes = base64Decode(base64Value.toString());
+      final decoded = img.decodeImage(bytes);
+      if (decoded == null) return bytes;
+
+      return Uint8List.fromList(img.encodePng(decoded));
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Widget imageBox(Uint8List? image, String label, String? base64Data) {
+    if (image == null) return const SizedBox();
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: const [
+          BoxShadow(color: Colors.white, blurRadius: 6, offset: Offset(0, 3)),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                label,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+              if (base64Data != null)
+                IconButton(
+                  icon: const Icon(Icons.copy, size: 20),
+                  onPressed: () {
+                    Clipboard.setData(ClipboardData(text: base64Data));
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('$label base64 copied to clipboard!'),
+                        duration: const Duration(seconds: 2),
+                      ),
+                    );
+                  },
+                  tooltip: 'Copy base64',
+                ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Container(
+            width: double.infinity,
+            color: Colors.white,
+            padding: const EdgeInsets.all(8),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child:
+                  _flipImagesOnDetails
+                      ? Transform(
+                        alignment: Alignment.center,
+                        transform: Matrix4.identity()..scale(1.0, -1.0, 1.0),
+                        child: Image.memory(image, fit: BoxFit.contain),
+                      )
+                      : Image.memory(image, fit: BoxFit.contain),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 185, 176, 156),
+      appBar: CommonAppBar(title: "${widget.title} Details"),
+      body:
+          loading
+              ? const Center(child: CircularProgressIndicator())
+              : SingleChildScrollView(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Patient Name
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: Text(
+                        "Patient Name: ${widget.patientName}",
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Patient ID & Diagnosis ID
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: const Color(0xffF9CF63),
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Text(
+                              "Patient Id: ${widget.patientId}",
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Text(
+                              "Diagnosis ID: ${widget.diagnosisId}",
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Date & Time
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            padding: const EdgeInsets.all(14),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlue,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Text(
+                              "Diagnosis Date:\n${widget.date}",
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Container(
+                            padding: const EdgeInsets.all(14),
+                            decoration: BoxDecoration(
+                              color: Colors.lightBlue,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Text(
+                              "Diagnosis Time:\n${widget.time}",
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Flip switch
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 8,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 6,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: Text(
+                              "Flip images (Day 1 Details)",
+                              style: TextStyle(fontWeight: FontWeight.w700),
+                            ),
+                          ),
+                          Switch(
+                            value: _flipImagesOnDetails,
+                            onChanged: _setFlipOnDetails,
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    // Images
+                    imageBox(lf, "Left Foot", lfBase64),
+                    imageBox(rf, "Right Foot", rfBase64),
+                    imageBox(lh, "Left Hand", lhBase64),
+                    imageBox(rh, "Right Hand", rhBase64),
+
+                    const SizedBox(height: 20),
+
+                    // Buttons
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 25,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                          ),
+                          onPressed: () {
+                            ensureDiagnosisBalanceAvailable(context).then((
+                              hasBalance,
+                            ) async {
+                              if (!hasBalance || !context.mounted) return;
+                              final submitted = await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder:
+                                      (_) => DiagnosisScreen(
+                                        patient_id: widget.patientId,
+                                        name: widget.patientName,
+                                        diagnosis_id: widget.diagnosisId,
+                                        gender: widget.gender,
+                                        isEdit: true,
+                                      ),
+                                ),
+                              );
+                              if (submitted == true && context.mounted) {
+                                Navigator.pop(context);
+                              }
+                            });
+                          },
+                          child: const Text(
+                            "UPDATE",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.pink,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 25,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder:
+                                    (_) => BodyPartScreen(
+                                      pId: widget.patientId,
+                                      dId: widget.diagnosisId,
+                                      isShow: false,
+                                    ),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            "History",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 25,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder:
+                                    (_) => DiagnosisHistoryScreen(
+                                      patientId: widget.patientId,
+                                      diagnosisId: widget.diagnosisId,
+                                      patientName: widget.patientName,
+                                    ),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            "TREATMENT",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10), // Extra bottom padding
+                  ],
+                ),
+              ),
+    );
+  }
+}

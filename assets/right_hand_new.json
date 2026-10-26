@@ -1,0 +1,1684 @@
+{
+  "RightHandNew": [
+    {
+      "id": "customClickButton1",
+      "x": 20.31,
+      "y": 53.34,
+      "tag": "Liver",
+      "index": 1,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton2",
+      "x": 36.42,
+      "y": 85.54,
+      "tag": "Foot Heel",
+      "index": 2,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton3",
+      "x": 34.01,
+      "y": 85.67,
+      "tag": "Foot Heel",
+      "index": 3,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton4",
+      "x": 31.32,
+      "y": 85.67,
+      "tag": "Foot Heel",
+      "index": 4,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton5",
+      "x": 28.92,
+      "y": 85.42,
+      "tag": "Sciatic Nerve",
+      "index": 5,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton6",
+      "x": 26.14,
+      "y": 85.6,
+      "tag": "Sciatic Nerve",
+      "index": 6,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton7",
+      "x": 23.55,
+      "y": 85.67,
+      "tag": "Sciatic Nerve",
+      "index": 7,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton8",
+      "x": 20.58,
+      "y": 85.67,
+      "tag": "Sciatic Nerve",
+      "index": 8,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton9",
+      "x": 44.75,
+      "y": 84.0,
+      "tag": "Sciatic Nerve",
+      "index": 9,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton10",
+      "x": 41.51,
+      "y": 83.87,
+      "tag": "Sciatic Nerve",
+      "index": 10,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton11",
+      "x": 58.08,
+      "y": 83.93,
+      "tag": "T12",
+      "index": 11,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton12",
+      "x": 38.26,
+      "y": 83.73,
+      "tag": "Sciatic Nerve",
+      "index": 12,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton13",
+      "x": 34.94,
+      "y": 79.98,
+      "tag": "Coccyx",
+      "index": 13,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton14",
+      "x": 57.62,
+      "y": 69.31,
+      "tag": "Parathyroid Gland",
+      "index": 14,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton15",
+      "x": 47.54,
+      "y": 84.0,
+      "tag": "Sciatic Nerve",
+      "index": 15,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton16",
+      "x": 63.46,
+      "y": 65.94,
+      "tag": "Parathyroid Gland",
+      "index": 16,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton17",
+      "x": 34.93,
+      "y": 77.84,
+      "tag": "Coccyx",
+      "index": 17,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton18",
+      "x": 43.55,
+      "y": 77.85,
+      "tag": "L4",
+      "index": 18,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton19",
+      "x": 26.51,
+      "y": 71.84,
+      "tag": "Small Intestine",
+      "index": 19,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton20",
+      "x": 17.35,
+      "y": 69.89,
+      "tag": "Large Intestine",
+      "index": 20,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton21",
+      "x": 26.52,
+      "y": 75.78,
+      "tag": "Small Intestine",
+      "index": 21,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton22",
+      "x": 22.06,
+      "y": 71.82,
+      "tag": "Small Intestine",
+      "index": 22,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton23",
+      "x": 26.7,
+      "y": 63.48,
+      "tag": "Small Intestine",
+      "index": 23,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton24",
+      "x": 17.16,
+      "y": 67.48,
+      "tag": "Large Intestine",
+      "index": 24,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton25",
+      "x": 22.16,
+      "y": 63.34,
+      "tag": "Small Intestine",
+      "index": 25,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton26",
+      "x": 22.25,
+      "y": 67.75,
+      "tag": "Small Intestine",
+      "index": 26,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton27",
+      "x": 17.25,
+      "y": 63.01,
+      "tag": "Large Intestine",
+      "index": 27,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton28",
+      "x": 22.3,
+      "y": 61.2,
+      "tag": "Small Intestine",
+      "index": 28,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton29",
+      "x": 69.66,
+      "y": 66.34,
+      "tag": "T6",
+      "index": 29,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton30",
+      "x": 67.43,
+      "y": 63.88,
+      "tag": "Throat",
+      "index": 30,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton31",
+      "x": 63.09,
+      "y": 74.3,
+      "tag": "T9",
+      "index": 31,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton32",
+      "x": 65.77,
+      "y": 72.84,
+      "tag": "T8",
+      "index": 32,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton33",
+      "x": 60.5,
+      "y": 67.68,
+      "tag": "Esophagus",
+      "index": 33,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton34",
+      "x": 60.21,
+      "y": 71.84,
+      "tag": "Parathyroid Gland",
+      "index": 34,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton35",
+      "x": 76.14,
+      "y": 71.42,
+      "tag": "T5",
+      "index": 35,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton36",
+      "x": 87.62,
+      "y": 51.64,
+      "tag": "C4",
+      "index": 36,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton37",
+      "x": 78.74,
+      "y": 69.02,
+      "tag": "T4",
+      "index": 37,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton38",
+      "x": 79.95,
+      "y": 66.28,
+      "tag": "T3",
+      "index": 38,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton39",
+      "x": 81.32,
+      "y": 63.81,
+      "tag": "T2",
+      "index": 39,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton40",
+      "x": 82.26,
+      "y": 61.33,
+      "tag": "T1",
+      "index": 40,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton41",
+      "x": 83.54,
+      "y": 59.06,
+      "tag": "C7",
+      "index": 41,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton42",
+      "x": 85.02,
+      "y": 56.98,
+      "tag": "C6",
+      "index": 42,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton43",
+      "x": 86.04,
+      "y": 54.31,
+      "tag": "C5",
+      "index": 43,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton44",
+      "x": 62.71,
+      "y": 70.12,
+      "tag": "Parathyroid Gland",
+      "index": 44,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton45",
+      "x": 34.66,
+      "y": 81.84,
+      "tag": "Uterus / Ovaries",
+      "index": 45,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton46",
+      "x": 50.58,
+      "y": 83.96,
+      "tag": "Sciatic Nerve",
+      "index": 46,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton47",
+      "x": 89.2,
+      "y": 49.03,
+      "tag": "C3",
+      "index": 47,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton48",
+      "x": 91.23,
+      "y": 46.69,
+      "tag": "C2",
+      "index": 48,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton49",
+      "x": 92.99,
+      "y": 42.34,
+      "tag": "Brain",
+      "index": 49,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton50",
+      "x": 57.33,
+      "y": 83.4,
+      "tag": "T12",
+      "index": 50,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton51",
+      "x": 65.49,
+      "y": 68.56,
+      "tag": "T8",
+      "index": 51,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton52",
+      "x": 44.1,
+      "y": 56.11,
+      "tag": "Adrenal Gland",
+      "index": 52,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton53",
+      "x": 71.79,
+      "y": 68.5,
+      "tag": "T6",
+      "index": 53,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton54",
+      "x": 48.17,
+      "y": 79.92,
+      "tag": "L3",
+      "index": 54,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton55",
+      "x": 48.36,
+      "y": 81.53,
+      "tag": "Sciatic Nerve",
+      "index": 55,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton56",
+      "x": 65.77,
+      "y": 79.66,
+      "tag": "T9",
+      "index": 56,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton57",
+      "x": 68.36,
+      "y": 78.05,
+      "tag": "T9",
+      "index": 57,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton58",
+      "x": 63.18,
+      "y": 81.26,
+      "tag": "T11",
+      "index": 58,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton59",
+      "x": 39.01,
+      "y": 75.71,
+      "tag": "Internal Thigh",
+      "index": 59,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton60",
+      "x": 39.1,
+      "y": 73.77,
+      "tag": "Small Intestine",
+      "index": 60,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton61",
+      "x": 48.27,
+      "y": 78.25,
+      "tag": "L3",
+      "index": 61,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton62",
+      "x": 35.03,
+      "y": 75.84,
+      "tag": "Internal Thigh",
+      "index": 62,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton63",
+      "x": 73.36,
+      "y": 74.17,
+      "tag": "T6",
+      "index": 63,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton64",
+      "x": 31.51,
+      "y": 82.05,
+      "tag": "Sciatic Nerve",
+      "index": 64,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton65",
+      "x": 70.77,
+      "y": 76.04,
+      "tag": "T7",
+      "index": 65,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton66",
+      "x": 76.51,
+      "y": 53.38,
+      "tag": "Tongue",
+      "index": 66,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton67",
+      "x": 43.36,
+      "y": 81.93,
+      "tag": "Sciatic Nerve",
+      "index": 67,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton68",
+      "x": 48.08,
+      "y": 76.24,
+      "tag": "L3",
+      "index": 68,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton69",
+      "x": 38.92,
+      "y": 79.86,
+      "tag": "Sacrum",
+      "index": 69,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton70",
+      "x": 43.73,
+      "y": 79.86,
+      "tag": "Sciatic Nerve",
+      "index": 70,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton71",
+      "x": 30.67,
+      "y": 77.66,
+      "tag": "Small Intestine",
+      "index": 71,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton72",
+      "x": 39.01,
+      "y": 67.83,
+      "tag": "Small Intestine",
+      "index": 72,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton73",
+      "x": 28.18,
+      "y": 82.06,
+      "tag": "Sciatic Nerve",
+      "index": 73,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton74",
+      "x": 21.52,
+      "y": 81.99,
+      "tag": "Sciatic Nerve",
+      "index": 74,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton75",
+      "x": 48.46,
+      "y": 64.82,
+      "tag": "Urinary Tract",
+      "index": 75,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton76",
+      "x": 30.86,
+      "y": 79.85,
+      "tag": "Sciatic Nerve",
+      "index": 76,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton77",
+      "x": 38.37,
+      "y": 81.93,
+      "tag": "Sciatic Nerve",
+      "index": 77,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton78",
+      "x": 26.51,
+      "y": 79.78,
+      "tag": "Sciatic Nerve",
+      "index": 78,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton79",
+      "x": 24.75,
+      "y": 82.2,
+      "tag": "Sciatic Nerve",
+      "index": 79,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton80",
+      "x": 22.06,
+      "y": 79.79,
+      "tag": "Sciatic Nerve",
+      "index": 80,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton81",
+      "x": 39.01,
+      "y": 77.78,
+      "tag": "Sacrum",
+      "index": 81,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton82",
+      "x": 17.34,
+      "y": 81.2,
+      "tag": "Thigh",
+      "index": 82,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton83",
+      "x": 21.97,
+      "y": 77.78,
+      "tag": "Appendix",
+      "index": 83,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton84",
+      "x": 26.61,
+      "y": 77.71,
+      "tag": "Small Intestine",
+      "index": 84,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton85",
+      "x": 17.43,
+      "y": 79.12,
+      "tag": "Thigh",
+      "index": 85,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton86",
+      "x": 48.55,
+      "y": 63.0,
+      "tag": "Kidney",
+      "index": 86,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton87",
+      "x": 30.86,
+      "y": 73.71,
+      "tag": "Small Intestine",
+      "index": 87,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton88",
+      "x": 30.68,
+      "y": 75.71,
+      "tag": "Small Intestine",
+      "index": 88,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton89",
+      "x": 17.44,
+      "y": 76.58,
+      "tag": "Appendix",
+      "index": 89,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton90",
+      "x": 26.5,
+      "y": 73.97,
+      "tag": "Small Intestine",
+      "index": 90,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton91",
+      "x": 21.97,
+      "y": 75.77,
+      "tag": "Appendix",
+      "index": 91,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton92",
+      "x": 17.45,
+      "y": 74.17,
+      "tag": "Appendix",
+      "index": 92,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton93",
+      "x": 30.9,
+      "y": 69.63,
+      "tag": "Small Intestine",
+      "index": 93,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton94",
+      "x": 31.04,
+      "y": 63.34,
+      "tag": "Small Intestine",
+      "index": 94,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton95",
+      "x": 44.01,
+      "y": 65.62,
+      "tag": "Urinary Tract",
+      "index": 95,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton96",
+      "x": 30.87,
+      "y": 65.54,
+      "tag": "Small Intestine",
+      "index": 96,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton97",
+      "x": 21.98,
+      "y": 73.84,
+      "tag": "Small Intestine",
+      "index": 97,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton98",
+      "x": 26.6,
+      "y": 65.68,
+      "tag": "Small Intestine",
+      "index": 98,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton99",
+      "x": 17.25,
+      "y": 72.3,
+      "tag": "Large Intestine",
+      "index": 99,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton100",
+      "x": 30.87,
+      "y": 71.9,
+      "tag": "Small Intestine",
+      "index": 100,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton101",
+      "x": 43.83,
+      "y": 63.34,
+      "tag": "Kidney",
+      "index": 101,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton102",
+      "x": 22.07,
+      "y": 69.69,
+      "tag": "Small Intestine",
+      "index": 102,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton103",
+      "x": 22.25,
+      "y": 65.61,
+      "tag": "Small Intestine",
+      "index": 103,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton104",
+      "x": 60.39,
+      "y": 82.8,
+      "tag": "T11",
+      "index": 104,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton105",
+      "x": 43.73,
+      "y": 73.9,
+      "tag": "Urinary Bladder",
+      "index": 105,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton106",
+      "x": 68.37,
+      "y": 71.1,
+      "tag": "T7",
+      "index": 106,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton107",
+      "x": 26.69,
+      "y": 69.69,
+      "tag": "Small Intestine",
+      "index": 107,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton108",
+      "x": 43.74,
+      "y": 75.78,
+      "tag": "Urinary Bladder",
+      "index": 108,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton109",
+      "x": 48.27,
+      "y": 74.18,
+      "tag": "Urinary Bladder",
+      "index": 109,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton110",
+      "x": 48.36,
+      "y": 72.29,
+      "tag": "Urinary Bladder",
+      "index": 110,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton111",
+      "x": 36.88,
+      "y": 52.37,
+      "tag": "Duodenum",
+      "index": 111,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton112",
+      "x": 39.2,
+      "y": 71.83,
+      "tag": "Small Intestine",
+      "index": 112,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton113",
+      "x": 29.75,
+      "y": 52.32,
+      "tag": "Gall Bladder",
+      "index": 113,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton114",
+      "x": 9.57,
+      "y": 17.41,
+      "tag": "Sinus",
+      "index": 114,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton115",
+      "x": 34.0,
+      "y": 88.37,
+      "tag": "Anus",
+      "index": 115,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton116",
+      "x": 36.33,
+      "y": 4.23,
+      "tag": "Sinus",
+      "index": 116,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton117",
+      "x": 8.38,
+      "y": 65.23,
+      "tag": "Leg",
+      "index": 117,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton118",
+      "x": 36.1,
+      "y": 88.46,
+      "tag": "Anus",
+      "index": 118,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton119",
+      "x": 48.29,
+      "y": 70.44,
+      "tag": "Urinary Tract",
+      "index": 119,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton120",
+      "x": 20.62,
+      "y": 92.9,
+      "tag": "Uterus / Ovaries",
+      "index": 120,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton121",
+      "x": 20.39,
+      "y": 96.05,
+      "tag": "Uterus / Ovaries",
+      "index": 121,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton122",
+      "x": 20.59,
+      "y": 90.37,
+      "tag": "Uterus / Ovaries",
+      "index": 122,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton123",
+      "x": 21.07,
+      "y": 88.29,
+      "tag": "Uterus / Ovaries",
+      "index": 123,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton124",
+      "x": 26.81,
+      "y": 58.7,
+      "tag": "Small Intestine",
+      "index": 124,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton125",
+      "x": 43.86,
+      "y": 72.0,
+      "tag": "Urinary Bladder",
+      "index": 125,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton126",
+      "x": 43.97,
+      "y": 69.81,
+      "tag": "Urinary Tract",
+      "index": 126,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton127",
+      "x": 35.0,
+      "y": 65.68,
+      "tag": "Small Intestine",
+      "index": 127,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton128",
+      "x": 26.12,
+      "y": 88.21,
+      "tag": "Sex Organ",
+      "index": 128,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton129",
+      "x": 28.65,
+      "y": 88.39,
+      "tag": "Anus",
+      "index": 129,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton130",
+      "x": 41.54,
+      "y": 92.76,
+      "tag": "Sex Organ",
+      "index": 130,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton131",
+      "x": 41.32,
+      "y": 95.61,
+      "tag": "Sex Organ",
+      "index": 131,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton132",
+      "x": 31.18,
+      "y": 89.98,
+      "tag": "Anus",
+      "index": 132,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton133",
+      "x": 31.31,
+      "y": 88.38,
+      "tag": "Anus",
+      "index": 133,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton134",
+      "x": 33.08,
+      "y": 50.16,
+      "tag": "Stomach",
+      "index": 134,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton135",
+      "x": 39.14,
+      "y": 63.4,
+      "tag": "Small Intestine",
+      "index": 135,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton136",
+      "x": 35.03,
+      "y": 73.84,
+      "tag": "Small Intestine",
+      "index": 136,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton137",
+      "x": 48.04,
+      "y": 68.7,
+      "tag": "Thyroid Gland",
+      "index": 137,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton138",
+      "x": 35.03,
+      "y": 69.93,
+      "tag": "Small Intestine",
+      "index": 138,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton139",
+      "x": 43.68,
+      "y": 67.65,
+      "tag": "Urinary Tract",
+      "index": 139,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton140",
+      "x": 48.17,
+      "y": 66.65,
+      "tag": "Thyroid Gland",
+      "index": 140,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton141",
+      "x": 26.66,
+      "y": 67.77,
+      "tag": "Small Intestine",
+      "index": 141,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton142",
+      "x": 31.12,
+      "y": 61.05,
+      "tag": "Small Intestine",
+      "index": 142,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton143",
+      "x": 26.76,
+      "y": 61.13,
+      "tag": "Small Intestine",
+      "index": 143,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton144",
+      "x": 38.88,
+      "y": 65.64,
+      "tag": "Small Intestine",
+      "index": 144,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton145",
+      "x": 48.43,
+      "y": 61.19,
+      "tag": "Kidney",
+      "index": 145,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton146",
+      "x": 39.17,
+      "y": 61.29,
+      "tag": "Small Intestine",
+      "index": 146,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton147",
+      "x": 44.1,
+      "y": 61.31,
+      "tag": "Kidney",
+      "index": 147,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton148",
+      "x": 35.02,
+      "y": 61.08,
+      "tag": "Small Intestine",
+      "index": 148,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton149",
+      "x": 35.27,
+      "y": 63.35,
+      "tag": "Small Intestine",
+      "index": 149,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton150",
+      "x": 35.08,
+      "y": 71.92,
+      "tag": "Small Intestine",
+      "index": 150,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton151",
+      "x": 35.45,
+      "y": 58.67,
+      "tag": "Small Intestine",
+      "index": 151,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton152",
+      "x": 31.07,
+      "y": 67.68,
+      "tag": "Small Intestine",
+      "index": 152,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton153",
+      "x": 31.27,
+      "y": 58.79,
+      "tag": "Small Intestine",
+      "index": 153,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton154",
+      "x": 43.48,
+      "y": 58.61,
+      "tag": "Kidney",
+      "index": 154,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton155",
+      "x": 40.98,
+      "y": 56.43,
+      "tag": "Large Intestine",
+      "index": 155,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton156",
+      "x": 17.23,
+      "y": 60.62,
+      "tag": "Large Intestine",
+      "index": 156,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton157",
+      "x": 17.25,
+      "y": 58.05,
+      "tag": "Large Intestine",
+      "index": 157,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton158",
+      "x": 39.11,
+      "y": 58.67,
+      "tag": "Small Intestine",
+      "index": 158,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton159",
+      "x": 47.99,
+      "y": 58.97,
+      "tag": "Kidney",
+      "index": 159,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton160",
+      "x": 37.62,
+      "y": 56.32,
+      "tag": "Large Intestine",
+      "index": 160,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton161",
+      "x": 22.11,
+      "y": 58.4,
+      "tag": "Small Intestine",
+      "index": 161,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton162",
+      "x": 39.19,
+      "y": 69.78,
+      "tag": "Small Intestine",
+      "index": 162,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton166",
+      "x": 31.63,
+      "y": 41.42,
+      "tag": "Thymus Gland",
+      "index": 166,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton167",
+      "x": 31.88,
+      "y": 43.25,
+      "tag": "Chest",
+      "index": 167,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton168",
+      "x": 37.35,
+      "y": 39.41,
+      "tag": "Lungs",
+      "index": 168,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton169",
+      "x": 90.69,
+      "y": 41.24,
+      "tag": "Pituitary Gland",
+      "index": 169,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton170",
+      "x": 34.06,
+      "y": 42.12,
+      "tag": "Solar Plexus",
+      "index": 170,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton171",
+      "x": 35.73,
+      "y": 40.68,
+      "tag": "Lungs",
+      "index": 171,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton172",
+      "x": 45.28,
+      "y": 40.32,
+      "tag": "Eye",
+      "index": 172,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton173",
+      "x": 29.47,
+      "y": 44.26,
+      "tag": "Lungs",
+      "index": 173,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton174",
+      "x": 27.75,
+      "y": 55.13,
+      "tag": "Large Intestine",
+      "index": 174,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton175",
+      "x": 44.14,
+      "y": 54.31,
+      "tag": "Adrenal Gland",
+      "index": 175,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton176",
+      "x": 8.47,
+      "y": 71.81,
+      "tag": "Knee",
+      "index": 176,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton177",
+      "x": 17.45,
+      "y": 65.29,
+      "tag": "Large Intestine",
+      "index": 177,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton178",
+      "x": 37.5,
+      "y": 54.32,
+      "tag": "Large Intestine",
+      "index": 178,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton179",
+      "x": 8.4,
+      "y": 74.19,
+      "tag": "Knee",
+      "index": 179,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton180",
+      "x": 40.46,
+      "y": 50.06,
+      "tag": "Duodenum",
+      "index": 180,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton181",
+      "x": 8.71,
+      "y": 67.53,
+      "tag": "Leg",
+      "index": 181,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton182",
+      "x": 40.95,
+      "y": 54.23,
+      "tag": "Large Intestine",
+      "index": 182,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton183",
+      "x": 24.81,
+      "y": 52.38,
+      "tag": "Gall Bladder",
+      "index": 183,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton184",
+      "x": 36.73,
+      "y": 50.04,
+      "tag": "Duodenum",
+      "index": 184,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton185",
+      "x": 8.33,
+      "y": 69.63,
+      "tag": "Knee",
+      "index": 185,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton186",
+      "x": 41.4,
+      "y": 88.13,
+      "tag": "Sex Organ",
+      "index": 186,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton187",
+      "x": 38.94,
+      "y": 88.19,
+      "tag": "Anus",
+      "index": 187,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton188",
+      "x": 23.6,
+      "y": 88.46,
+      "tag": "Sex Organ",
+      "index": 188,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton189",
+      "x": 49.55,
+      "y": 7.56,
+      "tag": "Sinus",
+      "index": 189,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton190",
+      "x": 8.42,
+      "y": 76.26,
+      "tag": "Thigh",
+      "index": 190,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton191",
+      "x": 23.69,
+      "y": 55.93,
+      "tag": "Large Intestine",
+      "index": 191,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton192",
+      "x": 8.58,
+      "y": 78.53,
+      "tag": "Thigh",
+      "index": 192,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton193",
+      "x": 8.86,
+      "y": 80.86,
+      "tag": "Thigh",
+      "index": 193,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton194",
+      "x": 31.39,
+      "y": 84.0,
+      "tag": "Uterus / Ovaries",
+      "index": 194,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton195",
+      "x": 35.08,
+      "y": 83.81,
+      "tag": "Uterus / Ovaries",
+      "index": 195,
+      "group": "endocrine"
+    },
+    {
+      "id": "customClickButton196",
+      "x": 9.48,
+      "y": 83.13,
+      "tag": "Thigh",
+      "index": 196,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton197",
+      "x": 9.4,
+      "y": 48.98,
+      "tag": "Elbow",
+      "index": 197,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton198",
+      "x": 8.63,
+      "y": 62.97,
+      "tag": "Leg",
+      "index": 198,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton199",
+      "x": 35.31,
+      "y": 67.65,
+      "tag": "Small Intestine",
+      "index": 199,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton200",
+      "x": 8.79,
+      "y": 60.69,
+      "tag": "Leg",
+      "index": 200,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton201",
+      "x": 8.8,
+      "y": 58.45,
+      "tag": "Wrist",
+      "index": 201,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton202",
+      "x": 8.79,
+      "y": 56.33,
+      "tag": "Wrist",
+      "index": 202,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton203",
+      "x": 53.98,
+      "y": 83.83,
+      "tag": "L1",
+      "index": 203,
+      "group": "spinal"
+    },
+    {
+      "id": "customClickButton204",
+      "x": 8.75,
+      "y": 54.14,
+      "tag": "Elbow",
+      "index": 204,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton205",
+      "x": 9.0,
+      "y": 51.78,
+      "tag": "Elbow",
+      "index": 205,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton206",
+      "x": 14.15,
+      "y": 45.86,
+      "tag": "Shoulder",
+      "index": 206,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton207",
+      "x": 9.53,
+      "y": 46.79,
+      "tag": "Shoulder",
+      "index": 207,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton208",
+      "x": 16.13,
+      "y": 43.15,
+      "tag": "Ear",
+      "index": 208,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton209",
+      "x": 17.55,
+      "y": 55.25,
+      "tag": "Large Intestine",
+      "index": 209,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton210",
+      "x": 27.06,
+      "y": 45.2,
+      "tag": "Lungs",
+      "index": 210,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton211",
+      "x": 21.89,
+      "y": 6.49,
+      "tag": "Sinus",
+      "index": 211,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton212",
+      "x": 41.89,
+      "y": 85.67,
+      "tag": "Sciatic Nerve",
+      "index": 212,
+      "group": "normal"
+    },
+    {
+      "id": "customClickButton213",
+      "x": 38.92,
+      "y": 85.47,
+      "tag": "Sciatic Nerve",
+      "index": 213,
+      "group": "normal"
+    }
+  ]
+}
